@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  StatusBar,
-  Text,
-  View,
-} from 'react-native';
+import {StatusBar, Text, View} from 'react-native';
 
 const App = () => {
   return (
