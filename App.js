@@ -1,45 +1,31 @@
 import React from 'react';
-import {StatusBar, Text, View} from 'react-native';
+import {Text, View, ScrollView} from 'react-native';
+import styled from 'styled-components/native';
 
-const Header = () => {
-  return (
-    <View>
-      <Text>THIS IS HEADER</Text>
-    </View>
-  );
-};
+import Header from './Screens/Home/Header';
+import Post from './Screens/Home/Post';
+import Navigation from './Screens/Home/Navigation';
 
-const Post = () => {
-  return (
-    <View>
-      <Text>THIS IS POST</Text>
-    </View>
-  );
-};
-
-const PostContainer = () => {
-  return (
-    <View>
-      <Post></Post>
-    </View>
-  );
-};
-
-const Navigation = () => {
-  return (
-    <View>
-      <Text>This is Nav</Text>
-    </View>
-  );
-};
+const Home = styled.View`
+  flex: 1;
+  justify-content: space-between;
+`;
 
 const App = () => {
   return (
-    <View>
+    <Home>
       <Header></Header>
-      <PostContainer></PostContainer>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}>
+        <Post></Post>
+        <Post></Post>
+        <Post></Post>
+        <Post></Post>
+        <Post></Post>
+      </ScrollView>
       <Navigation></Navigation>
-    </View>
+    </Home>
   );
 };
 
