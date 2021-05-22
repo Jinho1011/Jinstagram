@@ -4,7 +4,6 @@ import styled from 'styled-components/native';
 
 const PostContainer = styled.View`
   height: 200px;
-  background-color: red;
 `;
 
 const Post = () => {

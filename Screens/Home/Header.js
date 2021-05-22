@@ -1,17 +1,46 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, Image} from 'react-native';
 import styled from 'styled-components/native';
+import FeatherIcon from 'react-native-vector-icons/Feather';
 
 const HeaderContainer = styled.View`
   height: 60px;
   flex-direction: row;
-  background-color: yellow;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom-width: 1px;
+  border-bottom-color: #ccc;
+`;
+
+const LogoContainer = styled.View`
+  justify-content: center;
+  align-items: center;
+`;
+
+const Logo = styled.Image`
+  width: 140px;
+  height: 40px;
+`;
+
+const ButtonContainer = styled.View`
+  width: 130px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const Header = () => {
   return (
     <HeaderContainer>
-      <Text>THIS IS HEADER</Text>
+      <LogoContainer>
+        <Logo source={require('../../assets/instagram-logo.png')} />
+      </LogoContainer>
+      <ButtonContainer>
+        <FeatherIcon name="plus-square" size={28} color="black" />
+        <FeatherIcon name="heart" size={28} color="black" />
+        <FeatherIcon name="send" size={28} color="black" />
+      </ButtonContainer>
     </HeaderContainer>
   );
 };
