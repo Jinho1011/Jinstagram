@@ -19,10 +19,6 @@ const App = () => {
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}>
         <Post></Post>
-        <Post></Post>
-        <Post></Post>
-        <Post></Post>
-        <Post></Post>
       </ScrollView>
       <Navigation></Navigation>
     </Home>

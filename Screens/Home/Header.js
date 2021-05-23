@@ -24,9 +24,7 @@ const Logo = styled.Image`
 `;
 
 const ButtonContainer = styled.View`
-  width: 130px;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 `;
 
@@ -37,8 +35,6 @@ const Header = () => {
         <Logo source={require('../../assets/instagram-logo.png')} />
       </LogoContainer>
       <ButtonContainer>
-        <FeatherIcon name="plus-square" size={28} color="black" />
-        <FeatherIcon name="heart" size={28} color="black" />
         <FeatherIcon name="send" size={28} color="black" />
       </ButtonContainer>
     </HeaderContainer>
