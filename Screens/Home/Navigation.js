@@ -6,7 +6,7 @@ import FoundationIcon from 'react-native-vector-icons/Foundation';
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const NavigationContainer = styled.View`
-  height: 80px;
+  height: 60px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
