@@ -1,28 +1,20 @@
 import React from 'react';
-import {Text, View, ScrollView} from 'react-native';
-import styled from 'styled-components/native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
-import Header from './Screens/Home/Header';
-import Post from './Screens/Home/Post';
-import Navigation from './Screens/Home/Navigation';
+import HomePresenter from './Screens/Home/HomePresenter';
+import Tabs from './Tabs';
 
-const Home = styled.View`
-  flex: 1;
-  justify-content: space-between;
-`;
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <Home>
-      <Header></Header>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        showsHorizontalScrollIndicator={false}>
-        <Post></Post>
-        <Post></Post>
-      </ScrollView>
-      <Navigation></Navigation>
-    </Home>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Tab" component={Tabs}></Stack.Screen>
+        <Stack.Screen name="Home" component={HomePresenter}></Stack.Screen>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View, Image, Dimensions} from 'react-native';
 import styled from 'styled-components/native';
-import Carousel from 'react-native-snap-carousel';
+import Swiper from 'react-native-web-swiper';
 
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
@@ -44,7 +44,11 @@ const UserName = styled.Text`
 
 const UserLocation = styled.Text``;
 
-const PostImageContainer = styled.View``;
+const PostImageContainer = styled.View`
+  justify-content: center;
+  height: ${width * 0.8}px;
+  width: ${width}px;
+`;
 
 const PostImage = styled.Image`
   height: ${width * 0.8}px;
@@ -167,7 +171,15 @@ const Post = () => {
     <PostContainer>
       <PostHeaderWrapper></PostHeaderWrapper>
       <PostImageContainer>
-        <PostImage source={require('../../assets/cat1.jpg')}></PostImage>
+        <Swiper
+          controlsProps={{
+            prevPos: false,
+            nextPos: false,
+            dotsWrapperStyle: {marginTop: 100},
+          }}>
+          <PostImage source={require('../../assets/cat1.jpg')}></PostImage>
+          <PostImage source={require('../../assets/cat2.jpg')}></PostImage>
+        </Swiper>
       </PostImageContainer>
       <PostBodyWrapper></PostBodyWrapper>
     </PostContainer>
