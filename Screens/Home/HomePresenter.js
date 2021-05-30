@@ -1,14 +1,14 @@
 import React from 'react';
-import {Text, ScrollView} from 'react-native';
+import {ScrollView} from 'react-native';
 
 import styled from 'styled-components/native';
 
 import Header from './Header';
 import Post from './Post';
-import Navigation from './Navigation';
 
 const Home = styled.View`
   flex: 1;
+  background-color: white;
   justify-content: space-between;
 `;
 
@@ -19,6 +19,7 @@ const HomePresenter = () => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}>
+        <Post></Post>
         <Post></Post>
         <Post></Post>
       </ScrollView>
