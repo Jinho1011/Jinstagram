@@ -3,7 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import HomePresenter from './Screens/Home/HomePresenter';
-import SearchPresenter from './Screens/Search/Search';
+import SearchContainer from './Screens/Search/SearchContainer';
 import UploadPresenter from './Screens/Upload/Upload';
 import FavPresenter from './Screens/Favorite/Fav';
 import UserPresenter from './Screens/User/User';
@@ -36,8 +36,8 @@ export default () => {
       tabBarOptions={{
         showLabel: false,
       }}>
+      <Tab.Screen name="Search" component={SearchContainer} />
       <Tab.Screen name="Home" component={HomePresenter} />
-      <Tab.Screen name="Search" component={SearchPresenter} />
       <Tab.Screen name="Upload" component={UploadPresenter} />
       <Tab.Screen name="Fav" component={FavPresenter} />
       <Tab.Screen name="User" component={UserPresenter} />

@@ -4,6 +4,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import Tabs from './Tabs';
 
+console.disableYellowBox = true;
+
 const Stack = createStackNavigator();
 
 const App = () => {
